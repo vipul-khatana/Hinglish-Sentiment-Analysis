@@ -1,6 +1,14 @@
 # Hinglish-Sentiment-Analysis
 In this project we work on the sentiment analysis of Hinglish tweets, which are the tweets written entirely in Latin script but containing slang words from English and Hindi. Hinglish is a very famous and an informal language of India.
 
+## Sections 
++ [Overview](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#overview)
++ [Methodology](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#methodology)
++ [Installation](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#installation)
++ [How to run](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#how-to-run)
++ [Authors](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#authors)
++ [Contributing](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis#contributing)
+
 ## Overview 
 
 Given a Hinglish text, for sentiment analysis generally the techniques applicable for the English text are used. Hence we might lose out on the important sentiments that might be conveyed by the part written in Hindi. Thus it is highly important to take into account the sentiment of both the languages. 
@@ -15,9 +23,7 @@ The problem with these texts is that the Hindi written is in an informal manner,
 
 + **Pre-processing** One of the most initial steps where tasks like removing hashtags, mentions and links in the tweet were completed. We also applied spelling normalisation and found out the stem words using the stemmer package. 
 
-+ **Clustering** In this task we clustered out the Hindi and the English portions of the tweet. One of the main properties of such texts is that the English and the Hindi parts generally exist in groups. Hence we first try to isolate them. We use the corpus generated from a dictionary. For eg if we have to classify the word 'reccommend', which has been wrongly spelt, and the actual spellings are 'recommend'. So we first of all consider this word and compute it's [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) with words in our corpus starting from 'r' and having a length in range (l-2,l+2) where l is the length of the word we are considering. For the example we have considered the levenshtein distance will be less. 
-
-But for a word in Hindi like 'ghatiya' ,which means 'bad' or 'cheap' depending upon context, will have a large value of the levenshtein distance with any word beginning with g in the dictionary. Hence we alot a distance to every word and then finally apply the k-means algorithm to get two clusters of Hindi and English. In certain cases like the Hindi word 'main' means 'me'. But this is also an English word, however classifying this word as Hindi won't have any effect on our results since the words like these do not have any overall effect on the sentiment of the tweet. Most of the Hindi words which can effect the overall sentiment have a high levenshtein distance with a word of similar length in the English corpus. 
++ **Clustering** In this task we clustered out the Hindi and the English portions of the tweet. One of the main properties of such texts is that the English and the Hindi parts generally exist in groups. Hence we first try to isolate them. We use the corpus generated from a dictionary. For eg if we have to classify the word 'reccommend', which has been wrongly spelt, and the actual spellings are 'recommend'. So we first of all consider this word and compute it's [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) with words in our corpus starting from 'r' and having a length in range (l-2,l+2) where l is the length of the word we are considering. For the example we have considered the levenshtein distance will be less. But for a word in Hindi like 'ghatiya' ,which means 'bad' or 'cheap' depending upon context, will have a large value of the levenshtein distance with any word beginning with g in the dictionary. Hence we alot a distance to every word and then finally apply the k-means algorithm to get two clusters of Hindi and English. In certain cases like the Hindi word 'main' means 'me'. But this is also an English word, however classifying this word as Hindi won't have any effect on our results since the words like these do not have any overall effect on the sentiment of the tweet. Most of the Hindi words which can effect the overall sentiment have a high levenshtein distance with a word of similar length in the English corpus. 
 
 + **Processing** Using the googletrans library which has been [licensed by MIT](https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis/blob/master/LICENSE) we translate the Hindi written in Latin script into Hindi written in Devanagari script. Then we use the ESWN and the HSWN to interact with our text and assigne senti scores to all the words. For emojis we have used the python regular expression for assigning score to the emojis. 
 
@@ -60,7 +66,7 @@ Project under [**Dr. Brejesh Lall**](http://ee.iitd.ernet.in/people/brijeshlall.
 
 ## Contributing
 
-1) Fork it (https://github.com/vipul-khatana/Food-Recognition/fork)
+1) Fork it (https://github.com/vipul-khatana/Hinglish-Sentiment-Analysis/fork)
 2) Create your feature branch `git checkout -b feature/fooBar`
 3) Commit your changes `git commit -am 'Add some fooBar'`
 4) Push to the branch `git push origin feature/fooBar`
