@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+'''
+Created on Thu Nov 2 2017
+@author: vipulkhatana
+'''
 import re
 _ascii_letters = re.compile(r'[a-zA-Z0-9/.:-]', flags=re.UNICODE)
 
