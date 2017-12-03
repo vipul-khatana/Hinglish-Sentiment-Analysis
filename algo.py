@@ -1,5 +1,7 @@
-# -*- coding: utf-8 -*-
-
+'''
+Created on Sat Nov 2 2016
+@author: vipulkhatana
+'''
 import numpy as np 
 import xlsxwriter
 import sys
@@ -9,7 +11,8 @@ translator = Translator(service_urls=['translate.google.co.in'])
 
 if(len(sys.argv)!=2):
 	sys.exit("Usage: python algo.py <input_filename.xlsx>")
-	
+
+# translate to Hindi 
 def translate_to():
 	post = []
 
