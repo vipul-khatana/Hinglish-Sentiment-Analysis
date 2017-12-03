@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+'''
+Created on Sat Nov 4 2017
+@author: vipulkhatana
+'''
 from nltk.corpus import sentiwordnet as swn
 
 def polarity( a,b ):
