@@ -1,5 +1,5 @@
 '''
-Created on Wed Nov 2 2017
+Created on Thu Nov 2 2017
 @author: vipulkhatana
 '''
 def getMF(l):
