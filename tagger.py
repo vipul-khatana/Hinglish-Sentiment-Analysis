@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+'''
+Created on Thu Nov 2 2017
+@author: vipulkhatana
+'''
 import subprocess
 
 def getTag(data):
