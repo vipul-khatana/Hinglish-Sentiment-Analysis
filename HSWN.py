@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+''' 
+Created on Sat Oct 29 2016
+@author: vipulkhatana
+ '''
 from difflib import SequenceMatcher
 
 # Module to interact with the Hindi Senti Word Net
