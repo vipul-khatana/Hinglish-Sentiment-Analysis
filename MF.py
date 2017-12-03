@@ -1,5 +1,7 @@
-# -*- coding: utf-8 -*-
-
+'''
+Created on Wed Nov 2 2017
+@author: vipulkhatana
+'''
 def getMF(l):
 	y = []
 	for s in l.splitlines():
