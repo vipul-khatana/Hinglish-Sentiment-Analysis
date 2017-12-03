@@ -60,9 +60,8 @@ This will ouput the file Output.csv which consists of the scores of the tweets
 
 ## Authors: 
 * [Vipul Khatana](https://github.com/vipul-khatana)
-* [Kushal Sogani](https://www.facebook.com/kushal.sogani) 
 
-Project under [**Dr. Brejesh Lall**](http://ee.iitd.ernet.in/people/brijeshlall.html)
+Undergraduate Thesis under [**Dr. Brejesh Lall**](http://ee.iitd.ernet.in/people/brijeshlall.html)
 
 ## Contributing
 
